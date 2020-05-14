@@ -1,0 +1,73 @@
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        
+def Push(self, new_data):
+    new_data = Node(new_data)
+    new_data.next = self.head
+    self.head = new_data
+    
+def append(self, new_data):
+    new_data = Node(new_data)
+    if self.head is None:
+        self.head = new_data
+        return
+    last = self.head
+    while(last.next):
+        last = last.next
+        
+    last.next = new_data
+    
+def printlist(self):
+    temp = self.head
+    while(temp is not None):
+        print(temp.data)
+        temp = temp.next
+        
+def searching(self, target):
+    currentdata = self.head
+    while currentdata != None:
+        if currentdata.data == target:
+            return True
+        currentdata == currentdata.next
+        return False
+    
+def delNode(self, target2):
+    temp = self.head
+    
+    if(target2 is not None):
+        if(temp.data == target2):
+            self.head = temp.next
+            temp = None
+            return
+    while(temp is not None):
+        if temp.data == target2:
+            break
+        prev = temp
+        temp = temp.next
+        
+    if(temp == None):
+        return
+    
+    prev.next = temp.next
+    temp = None
+    
+def fungsiprogram():
+    myList = LinkedList()
+    myList.head = Node(10)
+    myList.Push(0)
+    myList.Push(4)
+    myList.Push(5)
+    
+    myList.Append(100)
+    
+    myList.delNode(5)
+    print('isi dari myList saat ini : ')
+    myList.printlist()
+    if myList.searching(10):
+        print('correct')
+    else:
+        print("Wrong")
+        
+fungsiprogram()
+            
